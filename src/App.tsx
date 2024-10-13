@@ -4,9 +4,11 @@ import "./index.css";
 function App() {
   return (
     <div className="App bg-gray-900 text-white">
-      <header className="bg-blue-700 py-8 px-8">
-        <h1 className="text-4xl font-bold">Waripamo-owei Dudafa</h1>
-        <p className="text-lg">Software Engineer & Developer</p>
+      <header className="bg-blue-700 py-8 px-8 ">
+        <div>
+          <h1 className="text-4xl font-bold">Waripamo-owei Dudafa</h1>
+          <p className="text-lg">Software Engineer & Developer</p>
+        </div>
         <nav className="mt-4">
           <a
             href="#about"
@@ -35,7 +37,7 @@ function App() {
         </nav>
       </header>
 
-      <section id="about" className="py-20 px-8">
+      <section id="about" className="py-10 px-8">
         <h2 className="text-3xl font-semibold mb-4">About Me</h2>
         <p className="mb-2">
           I'm a Computer Science and Artificial Intelligence student at the
@@ -49,7 +51,7 @@ function App() {
         </p>
       </section>
 
-      <section id="experience" className="py-20 px-8">
+      <section id="experience" className="py-10 px-8">
         <h2 className="text-3xl font-semibold mb-4">Work Experience</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-gray-700 p-5 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
@@ -85,7 +87,7 @@ function App() {
         </div>
       </section>
 
-      <section id="projects" className="bg-gray-800 py-20 px-8">
+      <section id="projects" className="bg-gray-800 py-10 px-8">
         <h2 className="text-3xl font-semibold mb-4">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-gray-700 p-5 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
@@ -111,7 +113,7 @@ function App() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-8">
+      <section id="contact" className="py-10 px-8">
         <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
         <p>
           Email:{" "}
