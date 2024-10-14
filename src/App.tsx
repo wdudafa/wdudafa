@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import "./index.css";
 import DarkImage from "./components/dark-image";
+import Card from "./components/card";
 
 function App() {
   const lightRadius = 300;
@@ -43,7 +44,7 @@ function App() {
   }, [targetPosition]);
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-screen w-full flex overflow-hidden">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-screen w-full flex overflow-hidden overflow-y-hidden">
       <div className="follow-mouse-container">
         <div
           className="follower bg-sky-200 blur-3xl"
@@ -62,7 +63,7 @@ function App() {
 
       <div className="w-1/3 justify-between align-middle">
         <div className="h-screen justify-center ">
-          <h1 className="text-4xl text-white text-center p-5 align-center font-bold cursor-default">
+          <h1 className="word text-4xl text-white text-center p-5 align-center font-bold cursor-default">
             Hi, I'm{" "}
             <span className="text-white hover:text-sky-400 transition-colors duration-500">
               Waripamo-owei
@@ -81,7 +82,7 @@ function App() {
               lightRadius={lightRadius}
               src={"me.JPG"}
               alt="Waripamo-owei Dudafa"
-              className="w-60 h-60 rounded-full object-cover hover:border-8 border-sky-400 transition-all duration-500"
+              className="w-60 h-60 rounded-full object-cover hover:border-8 border-sky-400 transition-all duration-500 shadow-lg"
               setHovering={setHovering}
             />
           </div>
@@ -127,63 +128,33 @@ function App() {
         </div>
       </div>
 
-      <div className="w-2/3 h-full overflow-scroll">
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
-        <p>hello</p>
+      <div className="w-2/3 h-full overflow-hidden">
+        <div>
+          <h1 className="text-xl text-white p-5 font-bold cursor-default">
+            <span className="text-white hover:text-sky-400 transition-colors duration-500">
+              Projects
+            </span>
+          </h1>
+
+          <div className="flex">
+            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
+            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
+            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
+          </div>
+        </div>
+        <div>
+          <h1 className="text-xl text-white p-5 font-bold cursor-default">
+            <span className="text-white hover:text-sky-400 transition-colors duration-500">
+              Projects
+            </span>
+          </h1>
+
+          <div className="flex">
+            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
+            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
+            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
+          </div>
+        </div>
       </div>
     </div>
   );
