@@ -1,13 +1,12 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import "./index.css";
+import DarkImage from "./components/dark-image";
 
 function App() {
   const lightRadius = 300;
   const followConstant = 0.1;
   const [hovering, setHovering] = useState(false);
-  const [imageOpacity, setOpacity] = useState(0.1);
-  const imageRef = useRef<HTMLImageElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [targetPosition, setTargetPosition] = useState({ x: 0, y: 0 });
 
@@ -17,26 +16,6 @@ function App() {
         x: event.clientX - lightRadius,
         y: event.clientY - lightRadius,
       });
-
-      if (imageRef.current) {
-        const rect = imageRef.current.getBoundingClientRect();
-        const itemCenterX = rect.left + rect.width / 2;
-        const itemCenterY = rect.top + rect.height / 2;
-
-        // Calculate the distance between the mouse and the item's center
-        const dx = event.clientX - itemCenterX;
-        const dy = event.clientY - itemCenterY;
-        const distanceFromItem = Math.sqrt(dx * dx + dy * dy);
-        const newOpacity = 1 - distanceFromItem / lightRadius;
-
-        if (newOpacity < 0.1) {
-          setOpacity(0.1);
-        } else if (newOpacity > 1) {
-          setOpacity(1);
-        } else {
-          setOpacity(newOpacity);
-        }
-      }
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -64,7 +43,7 @@ function App() {
   }, [targetPosition]);
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-900 h-screen w-full flex">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-screen w-full flex overflow-hidden">
       <div className="follow-mouse-container">
         <div
           className="follower bg-sky-200 blur-3xl"
@@ -81,7 +60,7 @@ function App() {
         ></div>
       </div>
 
-      <div className="justify-between align-middle">
+      <div className="w-1/3 justify-between align-middle">
         <div className="h-screen justify-center ">
           <h1 className="text-4xl text-white text-center p-5 align-center font-bold cursor-default">
             Hi, I'm{" "}
@@ -98,18 +77,12 @@ function App() {
           </h1>
 
           <div className="flex justify-center">
-            <img
-              ref={imageRef}
-              src={require("./assets/me.JPG")}
+            <DarkImage
+              lightRadius={lightRadius}
+              src={"me.JPG"}
               alt="Waripamo-owei Dudafa"
-              className="w-60 h-60 rounded-full object-cover hover:border-8 border-sky-400 transition-all duration-500 "
-              style={{ opacity: imageOpacity }}
-              onMouseEnter={() => {
-                setHovering(true);
-              }}
-              onMouseLeave={() => {
-                setHovering(false);
-              }}
+              className="w-60 h-60 rounded-full object-cover hover:border-8 border-sky-400 transition-all duration-500"
+              setHovering={setHovering}
             />
           </div>
 
@@ -121,7 +94,7 @@ function App() {
             things and improve my skills. I am currently looking for new
             opportunities to work on exciting projects and grow as a developer.
           </p>
-          <div className="flex justify-around px-48 pt-5">
+          <div className="flex justify-around px-11 pt-5">
             <a
               href="https://www.linkedin.com/in/wdudafa"
               target="_blank"
@@ -152,6 +125,65 @@ function App() {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="w-2/3 h-full overflow-scroll">
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
       </div>
     </div>
   );
