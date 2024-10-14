@@ -44,7 +44,7 @@ function App() {
   }, [targetPosition]);
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-screen w-full flex overflow-hidden overflow-y-hidden">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-screen w-full flex overflow-y-hidden">
       <div className="follow-mouse-container">
         <div
           className="follower bg-gradient-to-r from-sky-200 to-violet-400 blur-3xl"
@@ -128,27 +128,57 @@ function App() {
         </div>
       </div>
 
-      <div className="w-2/3 h-full overflow-hidden">
+      <div className="w-2/3 h-full overflow-y-hidden">
         <div>
           <h1 className="text-xl text-white p-5 font-bold cursor-default">
-              Projects
+            Projects
           </h1>
 
           <div className="flex">
-            <Card lightRadius={lightRadius} setHovering={setHovering} title={"Gojim"} date={"2024"}></Card>
-            <Card lightRadius={lightRadius} setHovering={setHovering} title={"Gojim"}date={"2024"}></Card>
-            <Card lightRadius={lightRadius} setHovering={setHovering} title={"Gojim"}date={"2024"}></Card>
+            <Card
+              lightRadius={lightRadius}
+              setHovering={setHovering}
+              title={"Gojim"}
+              date={"2024"}
+            ></Card>
+            <Card
+              lightRadius={lightRadius}
+              setHovering={setHovering}
+              title={"Gojim"}
+              date={"2024"}
+            ></Card>
+            <Card
+              lightRadius={lightRadius}
+              setHovering={setHovering}
+              title={"Gojim"}
+              date={"2024"}
+            ></Card>
           </div>
         </div>
         <div>
           <h1 className="text-xl text-white p-5 font-bold cursor-default">
-              Experience
+            Experience
           </h1>
 
           <div className="flex">
-            <Card lightRadius={lightRadius} setHovering={setHovering}title={"Gojim"}date={"2024"}></Card>
-            <Card lightRadius={lightRadius} setHovering={setHovering}title={"Gojim"}date={"2024"}></Card>
-            <Card lightRadius={lightRadius} setHovering={setHovering}title={"Gojim"}date={"2024"}></Card>
+            <Card
+              lightRadius={lightRadius}
+              setHovering={setHovering}
+              title={"Gojim"}
+              date={"2024"}
+            ></Card>
+            <Card
+              lightRadius={lightRadius}
+              setHovering={setHovering}
+              title={"Gojim"}
+              date={"2024"}
+            ></Card>
+            <Card
+              lightRadius={lightRadius}
+              setHovering={setHovering}
+              title={"Gojim"}
+              date={"2024"}
+            ></Card>
           </div>
         </div>
       </div>
