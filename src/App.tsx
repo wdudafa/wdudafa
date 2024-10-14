@@ -1,152 +1,158 @@
-import React from "react";
+import { useEffect, useState, useRef } from "react";
+import { FaEnvelope, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import "./index.css";
 
 function App() {
+  const lightRadius = 300;
+  const followConstant = 0.1;
+  const [hovering, setHovering] = useState(false);
+  const [imageOpacity, setOpacity] = useState(0.1);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [targetPosition, setTargetPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      setTargetPosition({
+        x: event.clientX - lightRadius,
+        y: event.clientY - lightRadius,
+      });
+
+      if (imageRef.current) {
+        const rect = imageRef.current.getBoundingClientRect();
+        const itemCenterX = rect.left + rect.width / 2;
+        const itemCenterY = rect.top + rect.height / 2;
+
+        // Calculate the distance between the mouse and the item's center
+        const dx = event.clientX - itemCenterX;
+        const dy = event.clientY - itemCenterY;
+        const distanceFromItem = Math.sqrt(dx * dx + dy * dy);
+        const newOpacity = 1 - distanceFromItem / lightRadius;
+
+        if (newOpacity < 0.1) {
+          setOpacity(0.1);
+        } else if (newOpacity > 1) {
+          setOpacity(1);
+        } else {
+          setOpacity(newOpacity);
+        }
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [lightRadius]);
+
+  useEffect(() => {
+    const smoothMove = () => {
+      setPosition((prevPosition) => ({
+        x:
+          prevPosition.x + (targetPosition.x - prevPosition.x) * followConstant,
+        y:
+          prevPosition.y + (targetPosition.y - prevPosition.y) * followConstant,
+      }));
+    };
+
+    const intervalId = setInterval(smoothMove, 16);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [targetPosition]);
+
   return (
-    <div className="App bg-gray-900 text-white">
-      <header className="bg-blue-700 py-8 px-8 ">
-        <div>
-          <h1 className="text-4xl font-bold">Waripamo-owei Dudafa</h1>
-          <p className="text-lg">Software Engineer & Developer</p>
-        </div>
-        <nav className="mt-4">
-          <a
-            href="#about"
-            className="mx-2 hover:underline hover:text-blue-300 transition-colors duration-300"
-          >
-            About Me
-          </a>
-          <a
-            href="#experience"
-            className="mx-2 hover:underline hover:text-blue-300 transition-colors duration-300"
-          >
-            Experience
-          </a>
-          <a
-            href="#projects"
-            className="mx-2 hover:underline hover:text-blue-300 transition-colors duration-300"
-          >
-            Projects
-          </a>
-          <a
-            href="#contact"
-            className="mx-2 hover:underline hover:text-blue-300 transition-colors duration-300"
-          >
-            Contact
-          </a>
-        </nav>
-      </header>
+    <div className="bg-gradient-to-r from-slate-900 to-gray-900 h-screen w-full flex">
+      <div className="follow-mouse-container">
+        <div
+          className="follower bg-sky-200 blur-3xl"
+          style={{
+            transform: `translate(${position.x}px, ${position.y}px)`,
+            width: `${lightRadius * 2}px`,
+            height: `${lightRadius * 2}px`,
+            borderRadius: "50%",
+            position: "fixed",
+            pointerEvents: "none",
+            opacity: hovering ? 0.3 : 0.1,
+            transition: "opacity 0.5s ease",
+          }}
+        ></div>
+      </div>
 
-      <section id="about" className="py-10 px-8">
-        <h2 className="text-3xl font-semibold mb-4">About Me</h2>
-        <p className="mb-2">
-          I'm a Computer Science and Artificial Intelligence student at the
-          University of Sussex with a strong foundation in software development.
-          I have experience in web and mobile app development, particularly
-          using React, JavaScript, TypeScript, and Python.
-        </p>
-        <p>
-          My journey includes developing a gym app, winning multiple hackathons,
-          and contributing to various open-source projects.
-        </p>
-      </section>
+      <div className="justify-between align-middle">
+        <div className="h-screen justify-center ">
+          <h1 className="text-4xl text-white text-center p-5 align-center font-bold cursor-default">
+            Hi, I'm{" "}
+            <span className="text-white hover:text-sky-400 transition-colors duration-500">
+              Waripamo-owei
+            </span>
+          </h1>
 
-      <section id="experience" className="py-10 px-8">
-        <h2 className="text-3xl font-semibold mb-4">Work Experience</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-gray-700 p-5 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <h3 className="text-xl font-semibold mb-2">
-              Academic Student Mentor
-            </h3>
-            <p className="text-gray-400">
-              University of Sussex | Sep 2024 - Present
-            </p>
-            <p>
-              Assisting students with modules and workshops, improving
-              engagement by 30%.
-            </p>
-          </div>
-          <div className="bg-gray-700 p-5 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <h3 className="text-xl font-semibold mb-2">Web Developer</h3>
-            <p className="text-gray-400">Hack Sussex | Jun 2024 - Present</p>
-            <p>
-              Developed and maintained the society's website using React,
-              increasing traffic by 25%.
-            </p>
-          </div>
-          <div className="bg-gray-700 p-5 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <h3 className="text-xl font-semibold mb-2">
-              Computer Science Tutor
-            </h3>
-            <p className="text-gray-400">Self-employed | Apr 2024 - Present</p>
-            <p>
-              Tutored students, contributing to an average 10% improvement in
-              exam results.
-            </p>
-          </div>
-        </div>
-      </section>
+          <h1 className="text-xl text-white text-center p-5 align-center font-bold cursor-default">
+            I am a{" "}
+            <span className="text-white hover:text-sky-400 transition-colors duration-500">
+              Software Engineer & Developer
+            </span>
+          </h1>
 
-      <section id="projects" className="bg-gray-800 py-10 px-8">
-        <h2 className="text-3xl font-semibold mb-4">My Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-gray-700 p-5 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <h3 className="text-xl font-semibold mb-2">Gojim Mobile App</h3>
-            <p>A gym app that tracks workouts, food intake, and body weight.</p>
+          <div className="flex justify-center">
+            <img
+              ref={imageRef}
+              src={require("./assets/me.JPG")}
+              alt="Waripamo-owei Dudafa"
+              className="w-60 h-60 rounded-full object-cover hover:border-8 border-sky-400 transition-all duration-500 "
+              style={{ opacity: imageOpacity }}
+              onMouseEnter={() => {
+                setHovering(true);
+              }}
+              onMouseLeave={() => {
+                setHovering(false);
+              }}
+            />
           </div>
-          <div className="bg-gray-700 p-5 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <h3 className="text-xl font-semibold mb-2">
-              Goof-Script Programming Language
-            </h3>
-            <p>
-              A custom programming language developed in 24 hours at a
-              hackathon.
-            </p>
-          </div>
-          <div className="bg-gray-700 p-5 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-            <h3 className="text-xl font-semibold mb-2">Rick's Ranch Game</h3>
-            <p>
-              A game developed in 24 hours, winning awards for creativity and
-              gameplay.
-            </p>
+
+          <p className="text-l text-white text-center pt-10 px-10 cursor-default">
+            I am a software engineer and developer with a passion for building
+            web applications that are user-friendly, accessible, and performant.
+            I have experience working with JavaScript, TypeScript, React,
+            Node.js, and other web technologies. I am always eager to learn new
+            things and improve my skills. I am currently looking for new
+            opportunities to work on exciting projects and grow as a developer.
+          </p>
+          <div className="flex justify-around px-48 pt-5">
+            <a
+              href="https://www.linkedin.com/in/wdudafa"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={40} color={"white"} />
+            </a>
+            <a
+              href="https://www.youtube.com/@waridev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube size={40} color={"white"} />
+            </a>
+            <a
+              href="https://github.com/Wari-Dudafa"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={40} color={"white"} />
+            </a>
+            <a
+              href="mailto:wd@wdudafa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaEnvelope size={40} color={"white"} />
+            </a>
           </div>
         </div>
-      </section>
-
-      <section id="contact" className="py-10 px-8">
-        <h2 className="text-3xl font-semibold mb-4">Contact Me</h2>
-        <p>
-          Email:{" "}
-          <a
-            href="mailto:wd@wdudafa.com"
-            className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
-          >
-            wd@wdudafa.com
-          </a>
-        </p>
-        <p>
-          LinkedIn:{" "}
-          <a
-            href="https://www.linkedin.com/in/wdudafa"
-            className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
-          >
-            My LinkedIn
-          </a>
-        </p>
-        <p>
-          GitHub:{" "}
-          <a
-            href="https://github.com/Wari-Dudafa"
-            className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
-          >
-            My GitHub
-          </a>
-        </p>
-      </section>
-
-      <footer className="bg-blue-700 py-8 px-8">
-        <p>© 2024 Waripamo-owei Dudafa. All rights reserved.</p>
-      </footer>
+      </div>
     </div>
   );
 }
