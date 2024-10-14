@@ -45,7 +45,7 @@ const DarkImage = ({
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  });
 
   return (
     <img

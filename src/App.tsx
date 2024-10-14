@@ -47,7 +47,7 @@ function App() {
     <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-screen w-full flex overflow-hidden overflow-y-hidden">
       <div className="follow-mouse-container">
         <div
-          className="follower bg-sky-200 blur-3xl"
+          className="follower bg-gradient-to-r from-sky-200 to-violet-400 blur-3xl"
           style={{
             transform: `translate(${position.x}px, ${position.y}px)`,
             width: `${lightRadius * 2}px`,
@@ -65,14 +65,14 @@ function App() {
         <div className="h-screen justify-center ">
           <h1 className="word text-4xl text-white text-center p-5 align-center font-bold cursor-default">
             Hi, I'm{" "}
-            <span className="text-white hover:text-sky-400 transition-colors duration-500">
+            <span className="text-white hover:text-sky-200 transition-colors duration-500">
               Waripamo-owei
             </span>
           </h1>
 
           <h1 className="text-xl text-white text-center p-5 align-center font-bold cursor-default">
             I am a{" "}
-            <span className="text-white hover:text-sky-400 transition-colors duration-500">
+            <span className="text-white hover:text-sky-200 transition-colors duration-500">
               Software Engineer & Developer
             </span>
           </h1>
@@ -82,7 +82,7 @@ function App() {
               lightRadius={lightRadius}
               src={"me.JPG"}
               alt="Waripamo-owei Dudafa"
-              className="w-60 h-60 rounded-full object-cover hover:border-8 border-sky-400 transition-all duration-500 shadow-lg"
+              className="w-60 h-60 rounded-full object-cover hover:border-4 border-sky-200 transition-all duration-500 shadow-lg"
               setHovering={setHovering}
             />
           </div>
@@ -131,28 +131,24 @@ function App() {
       <div className="w-2/3 h-full overflow-hidden">
         <div>
           <h1 className="text-xl text-white p-5 font-bold cursor-default">
-            <span className="text-white hover:text-sky-400 transition-colors duration-500">
               Projects
-            </span>
           </h1>
 
           <div className="flex">
-            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
-            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
-            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
+            <Card lightRadius={lightRadius} setHovering={setHovering} title={"Gojim"} date={"2024"}></Card>
+            <Card lightRadius={lightRadius} setHovering={setHovering} title={"Gojim"}date={"2024"}></Card>
+            <Card lightRadius={lightRadius} setHovering={setHovering} title={"Gojim"}date={"2024"}></Card>
           </div>
         </div>
         <div>
           <h1 className="text-xl text-white p-5 font-bold cursor-default">
-            <span className="text-white hover:text-sky-400 transition-colors duration-500">
-              Projects
-            </span>
+              Experience
           </h1>
 
           <div className="flex">
-            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
-            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
-            <Card lightRadius={lightRadius} setHovering={setHovering}></Card>
+            <Card lightRadius={lightRadius} setHovering={setHovering}title={"Gojim"}date={"2024"}></Card>
+            <Card lightRadius={lightRadius} setHovering={setHovering}title={"Gojim"}date={"2024"}></Card>
+            <Card lightRadius={lightRadius} setHovering={setHovering}title={"Gojim"}date={"2024"}></Card>
           </div>
         </div>
       </div>

@@ -45,7 +45,7 @@ const DarkDiv = ({
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  });
 
   return (
     <div
