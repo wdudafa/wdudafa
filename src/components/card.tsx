@@ -36,7 +36,7 @@ const Card = ({ lightRadius, setHovering, experience }: Props) => {
               <h2 className="text-xl text-sky-800">{experience.date}</h2>
             </div>
           </div>
-          <div className="p-2 transition-all duration-500 flip-card-back bg-sky-200 w-full h-full rounded-lg shadow-lg flex flex-col justify-center items-center">
+          <div className="p-2 transition-all duration-500 flip-card-back bg-sky-100 w-full h-full rounded-lg shadow-lg flex flex-col justify-center items-center">
             <h1 className="text-xl text-sky-900 ">{experience.description}</h1>
             <h2 className="text-l text-sky-800 font-bold">
               {experience.technologies.join(", ")}

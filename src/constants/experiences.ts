@@ -8,19 +8,21 @@ export const experiences: Experience[] = [
   {
     title: "Web Developer",
     date: "2024",
-    description: "This is a job that I did.",
+    description:
+      "I worked at HackSussex, making sure the website was pleasing to look at and easy to use.",
     technologies: ["React", "TypeScript", "Bootstrap"],
   },
   {
     title: "Maths Tutor",
     date: "2023",
-    description: "This is a job that I did.",
+    description:
+      "I helped GCSE students with Mathematics conepts they were struggling with.",
     technologies: [""],
   },
   {
-    title: "CS Tutor",
+    title: "Computer Science Tutor",
     date: "2024",
-    description: "This is a job that I did.",
+    description: "Helped A-Level CS students go over various topics.",
     technologies: [""],
   },
 ];
