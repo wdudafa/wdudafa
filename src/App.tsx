@@ -75,7 +75,7 @@ function App() {
           <h1 className="text-xl text-white text-center p-5 align-center font-bold cursor-default">
             I am a{" "}
             <span className="text-white hover:text-sky-200 transition-colors duration-500">
-              Software Engineer & Developer
+              Software Engineer
             </span>
           </h1>
 
