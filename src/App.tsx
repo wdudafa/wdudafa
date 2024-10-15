@@ -3,6 +3,8 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import "./index.css";
 import DarkImage from "./components/dark-image";
 import Card from "./components/card";
+import { experiences, Experience } from "./constants/experiences";
+import projects from "./constants/projects";
 
 function App() {
   const lightRadius = 300;
@@ -44,7 +46,7 @@ function App() {
   }, [targetPosition]);
 
   return (
-    <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-screen w-full flex overflow-y-hidden">
+    <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-full w-full lg:overflow-y-hidden lg:flex lg:h-screen">
       <div className="follow-mouse-container">
         <div
           className="follower bg-gradient-to-r from-sky-200 to-violet-400 blur-3xl"
@@ -61,7 +63,7 @@ function App() {
         ></div>
       </div>
 
-      <div className="w-1/3 justify-between align-middle">
+      <div className="lg:w-1/3 justify-between align-middle">
         <div className="h-screen justify-center ">
           <h1 className="word text-4xl text-white text-center p-5 align-center font-bold cursor-default">
             Hi, I'm{" "}
@@ -128,31 +130,20 @@ function App() {
         </div>
       </div>
 
-      <div className="w-2/3 h-full overflow-y-hidden">
+      <div className="lg:w-2/3 h-full lg:overflow-y-scroll">
         <div>
           <h1 className="text-xl text-white p-5 font-bold cursor-default">
             Projects
           </h1>
 
-          <div className="flex">
-            <Card
-              lightRadius={lightRadius}
-              setHovering={setHovering}
-              title={"Gojim"}
-              date={"2024"}
-            ></Card>
-            <Card
-              lightRadius={lightRadius}
-              setHovering={setHovering}
-              title={"Gojim"}
-              date={"2024"}
-            ></Card>
-            <Card
-              lightRadius={lightRadius}
-              setHovering={setHovering}
-              title={"Gojim"}
-              date={"2024"}
-            ></Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {projects.map((project: Experience) => (
+              <Card
+                lightRadius={lightRadius}
+                setHovering={setHovering}
+                experience={project}
+              />
+            ))}
           </div>
         </div>
         <div>
@@ -160,25 +151,14 @@ function App() {
             Experience
           </h1>
 
-          <div className="flex">
-            <Card
-              lightRadius={lightRadius}
-              setHovering={setHovering}
-              title={"Gojim"}
-              date={"2024"}
-            ></Card>
-            <Card
-              lightRadius={lightRadius}
-              setHovering={setHovering}
-              title={"Gojim"}
-              date={"2024"}
-            ></Card>
-            <Card
-              lightRadius={lightRadius}
-              setHovering={setHovering}
-              title={"Gojim"}
-              date={"2024"}
-            ></Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {experiences.map((experience: Experience) => (
+              <Card
+                lightRadius={lightRadius}
+                setHovering={setHovering}
+                experience={experience}
+              />
+            ))}
           </div>
         </div>
       </div>
