@@ -35,13 +35,6 @@ const Card = ({ lightRadius, setHovering, experience }: Props) => {
               </h1>
               <h2 className="text-xl text-sky-800">{experience.date}</h2>
             </div>
-            {experience.logo && (
-              <img
-                className="h-28 w-28 rounded-lg p-2 mt-4"
-                src={experience.logo}
-                alt="Logo"
-              ></img>
-            )}
           </div>
           <div className="p-2 transition-all duration-500 flip-card-back bg-sky-200 w-full h-full rounded-lg shadow-lg flex flex-col justify-center items-center">
             <h1 className="text-xl text-sky-900 ">{experience.description}</h1>

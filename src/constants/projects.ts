@@ -2,37 +2,34 @@ import { Experience } from "./experiences";
 
 const projects: Experience[] = [
   {
-    title: "Portfolio",
+    title: "Portfolio Website",
     date: "2024",
     description: "This is a project that I worked on.",
     technologies: ["React", "TypeScript", "TailwindCSS"],
   },
   {
-    title: "Gojim",
+    title: "Gojim Fitness App",
     date: "2023",
     description: "This is a project that I worked on.",
     technologies: ["React Native", "JavaScript", "Expo", "SQLite"],
-    logo: "https://github.com/Wari-Dudafa/gojim/blob/gojim-1/assets/icon-transparent.png?raw=true",
   },
   {
-    title: "Rick's Ranch",
+    title: "Rick's Ranch Videogame",
     date: "2023",
     description: "This is a project that I worked on.",
     technologies: ["C#", "Unity"],
   },
   {
-    title: "GoofScript",
+    title: "GoofScript Proramming Language",
     date: "2024",
     description: "This is a project that I worked on.",
     technologies: ["Python"],
-    logo: "https://github.com/Wari-Dudafa/GoofScript-MemeIDE/blob/main/assets/GoofyIcon.png?raw=true",
   },
   {
-    title: "Branch",
+    title: "Branch Platform",
     date: "2024",
     description: "This is a project that I worked on.",
     technologies: ["PHP", "HTML", "CSS"],
-    logo: "https://github.com/Wari-Dudafa/2023-coursework/blob/main/BranchLogo.png?raw=true",
   },
 ];
 

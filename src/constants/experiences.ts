@@ -3,7 +3,6 @@ export interface Experience {
   date: string;
   description: string;
   technologies: string[];
-  logo?: string;
 }
 export const experiences: Experience[] = [
   {
