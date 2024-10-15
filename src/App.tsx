@@ -130,7 +130,7 @@ function App() {
         </div>
       </div>
 
-      <div className="mt-14 md:mt-0 lg:w-2/3 h-full lg:overflow-y-scroll">
+      <div className="mt-14 md:mt-0 lg:w-2/3 h-full lg:overflow-y-scroll pb-24">
         <div>
           <h1 className="text-xl text-white p-5 font-bold cursor-default text-center lg:text-left">
             Projects
