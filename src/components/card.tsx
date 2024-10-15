@@ -11,7 +11,7 @@ const Card = ({ lightRadius, setHovering, experience }: Props) => {
   return (
     <DarkDiv
       lightRadius={lightRadius}
-      className="transition-all duration-500 h-52 m-5 flex relative mx-24 md:mx-11 lg:mx-5"
+      className="transition-all duration-500 h-52 m-5 flex relative mx-11 lg:mx-5"
       setHovering={setHovering}
     >
       <input
