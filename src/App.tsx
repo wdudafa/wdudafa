@@ -113,7 +113,7 @@ function App() {
               <FaYoutube size={40} color={"white"} />
             </a>
             <a
-              href="https://github.com/Wari-Dudafa"
+              href="https://github.com/wdudafa"
               target="_blank"
               rel="noopener noreferrer"
             >
