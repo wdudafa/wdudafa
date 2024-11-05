@@ -1,6 +1,6 @@
 # Waripamo-owei Dudafa
 
-## Software Engineer & Student
+## Software Engineer
 
 ### Languages
 
