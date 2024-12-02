@@ -90,11 +90,11 @@ function App() {
           </div>
 
           <p className="text-l text-white text-center pt-10 px-10 cursor-default">
-            I am a software engineer with a passion for building
-            web applications that are user-friendly, accessible, and performant.
-            I have experience working with JavaScript, TypeScript, React,
-            Node.js, and other web technologies. I am always eager to learn new
-            things and improve my skills.
+            I am a software engineer with a passion for building web
+            applications that are user-friendly, accessible, and performant. I
+            have experience working with Python, JavaScript, Java, and other
+            technologies. I am always eager to learn new things and improve my
+            skills.
           </p>
           <div className="flex justify-around px-11 pt-5">
             <a
