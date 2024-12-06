@@ -5,6 +5,7 @@ import DarkImage from "./components/dark-image";
 import Card from "./components/card";
 import { experiences, Experience } from "./constants/experiences";
 import projects from "./constants/projects";
+import StarContainer from "./components/star-container";
 
 function App() {
   const lightRadius = 300;
@@ -47,7 +48,10 @@ function App() {
 
   return (
     <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-full w-full lg:overflow-y-hidden lg:flex lg:h-screen">
-      <div className="follow-mouse-container">
+     <StarContainer/>
+
+      {/*
+       <div className="follow-mouse-container">
         <div
           className="follower bg-gradient-to-r from-sky-200 to-violet-400 blur-3xl"
           style={{
@@ -161,6 +165,7 @@ function App() {
           </div>
         </div>
       </div>
+      */}
     </div>
   );
 }
