@@ -1,13 +1,17 @@
 import Particle from "./particle";
 
 class Box {
-  ctx: CanvasRenderingContext2D;
   particles: Particle[] = [];
+  ctx: CanvasRenderingContext2D;
 
   constructor(ctx: CanvasRenderingContext2D) {
     this.ctx = ctx;
     window.addEventListener("mousemove", (event) => {
       this.checkCollisions(event.clientX, event.clientY);
+    });
+    window.addEventListener("resize", () => {
+      this.ctx.canvas.width = window.innerWidth;
+      this.ctx.canvas.height = window.innerHeight;
     });
   }
 
@@ -21,8 +25,8 @@ class Box {
     this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     this.particles.forEach((particle) => {
       particle.update();
-      const position = particle.position;
-      const targetPosition = particle.targetPosition;
+      const position = { ...particle.position };
+      const targetPosition = { ...particle.targetPosition };
       if (position.x - particle.radius > window.innerWidth) {
         position.x = -particle.radius;
         targetPosition.x = -particle.radius;
@@ -41,15 +45,17 @@ class Box {
   checkCollisions(x: number, y: number) {
     const mouseRadius = 300 * 0.95;
     this.particles.forEach((particle) => {
-      const position = particle.position;
+      const position = { ...particle.position };
       const distance = Math.sqrt(
         Math.pow(position.x - x, 2) + Math.pow(position.y - y, 2)
       );
+      
       if (distance < mouseRadius) {
         const speed = 0.1;
         const angle = Math.atan2(position.y - y, position.x - x);
         const targetX = x + Math.cos(angle) * mouseRadius;
         const targetY = y + Math.sin(angle) * mouseRadius;
+
         position.x += (targetX - position.x) * speed;
         position.y += (targetY - position.y) * speed;
         particle.setPosition(position);
