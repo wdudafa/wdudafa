@@ -97,7 +97,7 @@ function App() {
               </div>
 
               <p className="text-l text-white text-center pt-10 px-10 cursor-default">
-                I am a software engineer with a passion for building web
+                I am a software engineer with a passion for building
                 applications that are user-friendly, accessible, and performant.
                 I have experience working with Python, JavaScript, Java, and
                 other technologies. I am always eager to learn new things and
