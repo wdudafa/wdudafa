@@ -30,7 +30,7 @@ const ParticleContainer = () => {
       width={screenWidth}
       height={screenHeight}
       style={{ opacity: 0.075 }}
-      className="absolute w-full h-full"
+      className="fixed w-full h-full"
     />
   );
 };
