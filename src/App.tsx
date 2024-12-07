@@ -90,7 +90,8 @@ function App() {
                   lightRadius={lightRadius}
                   src={"me.JPG"}
                   alt="Waripamo-owei Dudafa"
-                  className="w-60 h-60 rounded-full object-cover hover:border-4 border-sky-200 transition-all duration-500 shadow-lg"
+                  className="w-60 h-60 rounded-full  transition-all duration-500 ease-in-out transform hover:scale-105 shadow-lg"
+                  imageClassName="w-60 h-60 rounded-full object-cover transition-all duration-500 ease-in-out transform hover:scale-105 hover:border-4 border-sky-200"
                   setHovering={setHovering}
                 />
               </div>

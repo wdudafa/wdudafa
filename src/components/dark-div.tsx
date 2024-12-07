@@ -15,7 +15,8 @@ const DarkDiv = ({
   setHovering = (hovering: boolean) => {},
   onClick = () => {},
 }: Props) => {
-  const [imageOpacity, setOpacity] = useState(0.1);
+  const defaultOpacity = 0.25;
+  const [divOpacity, setOpacity] = useState(defaultOpacity);
   const divRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,7 +32,7 @@ const DarkDiv = ({
         const newOpacity = 1 - distanceFromItem / lightRadius;
 
         if (newOpacity < 0.1) {
-          setOpacity(0.1);
+          setOpacity(defaultOpacity);
         } else if (newOpacity > 1) {
           setOpacity(1);
         } else {
@@ -51,7 +52,7 @@ const DarkDiv = ({
     <div
       ref={divRef}
       className={className}
-      style={{ opacity: imageOpacity }}
+      style={{ opacity: divOpacity }}
       onMouseEnter={() => {
         setHovering(true);
       }}

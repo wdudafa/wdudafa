@@ -29,7 +29,7 @@ const ParticleContainer = () => {
       ref={canvasRef}
       width={screenWidth}
       height={screenHeight}
-      style={{ opacity: 0.05 }}
+      style={{ opacity: 0.075 }}
       className="absolute w-full h-full"
     />
   );
