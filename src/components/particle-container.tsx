@@ -10,7 +10,7 @@ const ParticleContainer = ({}: Props) => {
 
   useEffect(() => {
     if (canvasRef.current) {
-      const numberOfParticles = 100;
+      const numberOfParticles = 1000;
       const canvas = canvasRef.current;
       const ctx = canvas.getContext("2d");
 
@@ -31,6 +31,7 @@ const ParticleContainer = ({}: Props) => {
       ref={canvasRef}
       width={screenWidth}
       height={screenHeight}
+      style={{ opacity: 0.05 }}
       className="absolute w-full h-full"
     />
   );

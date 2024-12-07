@@ -1,15 +1,16 @@
 class Particle {
-  radius: number;
+  radius: number = 2.5 * Math.random();
   ctx: CanvasRenderingContext2D;
   position: { x: number; y: number };
+  targetPosition: { x: number; y: number };
 
   constructor(
     ctx: CanvasRenderingContext2D,
     position: { x: number; y: number }
   ) {
     this.ctx = ctx;
-    this.radius = 20;
-    this.position = position;
+    this.position = { ...position };
+    this.targetPosition = { ...position };
   }
 
   draw() {
@@ -23,13 +24,28 @@ class Particle {
   }
 
   update() {
-    const randomMovementScale = 1;
-    this.position.x += Math.random() * randomMovementScale;
-    this.position.y += Math.random() * randomMovementScale;
+    const randomFactor = 0.7;
+
+    const dx = this.targetPosition.x - this.position.x;
+    const dy = this.targetPosition.y - this.position.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    const moveRate = 50;
+    if (distance > 1) {
+      this.position.x += dx / moveRate;
+      this.position.y += dy / moveRate;
+    }
+
+    this.targetPosition.x += Math.random() * randomFactor;
+    this.targetPosition.y += Math.random() * randomFactor * 2;
   }
 
   setPosition(position: { x: number; y: number }) {
     this.position = position;
+  }
+
+  setTargetPosition(targetPosition: { x: number; y: number }) {
+    this.targetPosition = targetPosition;
   }
 }
 

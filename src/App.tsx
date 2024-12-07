@@ -8,9 +8,9 @@ import projects from "./constants/projects";
 import ParticleContainer from "./components/particle-container";
 
 function App() {
-  const displayRestOfPage = true;
   const lightRadius = 300;
   const followConstant = 0.1;
+  const displayRestOfPage = true;
   const [hovering, setHovering] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [targetPosition, setTargetPosition] = useState({ x: 0, y: 0 });
@@ -51,7 +51,7 @@ function App() {
     <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-full w-full lg:overflow-y-hidden lg:flex lg:h-screen">
       <ParticleContainer />
 
-      {displayRestOfPage ?? (
+      {displayRestOfPage ? (
         <>
           <div className="follow-mouse-container">
             <div
@@ -168,7 +168,7 @@ function App() {
             </div>
           </div>
         </>
-      )}
+      ) : null}
     </div>
   );
 }
