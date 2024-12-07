@@ -40,10 +40,10 @@ function App() {
       }));
     };
 
-    const intervalId = setInterval(smoothMove, 16);
+    const animationFrameId = requestAnimationFrame(smoothMove);
 
     return () => {
-      clearInterval(intervalId);
+      cancelAnimationFrame(animationFrameId);
     };
   }, [targetPosition]);
 

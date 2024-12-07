@@ -21,8 +21,8 @@ class Box {
     this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     this.particles.forEach((particle) => {
       particle.update();
-      const targetPosition = particle.targetPosition;
       const position = particle.position;
+      const targetPosition = particle.targetPosition;
       if (position.x - particle.radius > window.innerWidth) {
         position.x = -particle.radius;
         targetPosition.x = -particle.radius;
@@ -39,7 +39,7 @@ class Box {
   }
 
   checkCollisions(x: number, y: number) {
-    const mouseRadius = 300 * 0.8;
+    const mouseRadius = 300 * 0.95;
     this.particles.forEach((particle) => {
       const position = particle.position;
       const distance = Math.sqrt(

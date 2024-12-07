@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 import Box from "../particles/box";
 
 const ParticleContainer = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     if (canvasRef.current) {

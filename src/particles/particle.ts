@@ -1,7 +1,7 @@
 class Particle {
-  radius: number = 2.5 * Math.random();
   ctx: CanvasRenderingContext2D;
   position: { x: number; y: number };
+  radius: number = 2.5 * Math.random();
   targetPosition: { x: number; y: number };
 
   constructor(
