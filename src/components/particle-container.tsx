@@ -22,7 +22,7 @@ const ParticleContainer = () => {
         window.requestAnimationFrame(() => box.updateParticles());
       }
     }
-  });
+  }, [screenWidth, screenHeight]);
 
   return (
     <canvas
