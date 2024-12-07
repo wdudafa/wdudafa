@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Box from "../particles/box";
 
-interface Props {}
-
-const ParticleContainer = ({}: Props) => {
+const ParticleContainer = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
@@ -24,7 +22,7 @@ const ParticleContainer = ({}: Props) => {
         window.requestAnimationFrame(() => box.updateParticles());
       }
     }
-  }, []);
+  });
 
   return (
     <canvas
