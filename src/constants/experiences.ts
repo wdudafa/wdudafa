@@ -22,7 +22,7 @@ export const experiences: Experience[] = [
     title: "Maths Tutor",
     date: "2023",
     description:
-      "I helped GCSE students with Mathematics conepts they were struggling with.",
+      "I helped GCSE students with Mathematics concepts they were struggling with.",
     technologies: [""],
   },
   {
