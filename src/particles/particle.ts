@@ -18,9 +18,6 @@ class Particle {
     this.ctx.arc(this.position.x, this.position.y, this.radius, 0, 2 * Math.PI);
     this.ctx.fillStyle = "white";
     this.ctx.fill();
-    this.ctx.lineWidth = 0;
-    this.ctx.strokeStyle = "white";
-    this.ctx.stroke();
   }
 
   update() {
@@ -38,14 +35,6 @@ class Particle {
 
     this.targetPosition.x += Math.random() * randomFactor;
     this.targetPosition.y += Math.random() * randomFactor * 2;
-  }
-
-  setPosition(position: { x: number; y: number }) {
-    this.position = position;
-  }
-
-  setTargetPosition(targetPosition: { x: number; y: number }) {
-    this.targetPosition = targetPosition;
   }
 }
 
