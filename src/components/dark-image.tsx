@@ -15,19 +15,19 @@ const DarkImage = ({
   alt,
   className,
   lightRadius,
+  setHovering,
   imageClassName,
-  setHovering = (hovering: boolean) => {},
 }: Props) => {
   return (
     <DarkDiv
+      className={className}
       lightRadius={lightRadius}
       setHovering={setHovering}
-      className={className}
     >
       <img
         alt={alt}
-        src={require("../assets/" + src)}
         className={imageClassName}
+        src={require("../assets/" + src)}
       />
     </DarkDiv>
   );

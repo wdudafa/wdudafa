@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import "./index.css";
 import DarkImage from "./components/dark-image";
@@ -6,46 +6,12 @@ import Card from "./components/card";
 import { experiences, Experience } from "./constants/experiences";
 import projects from "./constants/projects";
 import ParticleContainer from "./components/particle-container";
+import FollowMouse from "./components/follow-mouse";
 
 function App() {
   const lightRadius = 300;
-  const followConstant = 0.1;
   const displayRestOfPage = true;
   const [hovering, setHovering] = useState(false);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [targetPosition, setTargetPosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      setTargetPosition({
-        x: event.clientX - lightRadius,
-        y: event.clientY - lightRadius,
-      });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [lightRadius]);
-
-  useEffect(() => {
-    const smoothMove = () => {
-      setPosition((prevPosition) => ({
-        x:
-          prevPosition.x + (targetPosition.x - prevPosition.x) * followConstant,
-        y:
-          prevPosition.y + (targetPosition.y - prevPosition.y) * followConstant,
-      }));
-    };
-
-    const intervalId = setInterval(smoothMove, 16);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [targetPosition]);
 
   return (
     <div className="bg-gradient-to-r from-slate-900 to-gray-800 h-full w-full lg:overflow-y-hidden lg:flex lg:h-screen">
@@ -53,21 +19,7 @@ function App() {
 
       {displayRestOfPage ? (
         <>
-          <div className="follow-mouse-container">
-            <div
-              className="follower bg-gradient-to-r from-sky-200 to-violet-400 blur-3xl"
-              style={{
-                transform: `translate(${position.x}px, ${position.y}px)`,
-                width: `${lightRadius * 2}px`,
-                height: `${lightRadius * 2}px`,
-                borderRadius: "50%",
-                position: "fixed",
-                pointerEvents: "none",
-                opacity: hovering ? 0.3 : 0.1,
-                transition: "opacity 0.5s ease",
-              }}
-            ></div>
-          </div>
+          <FollowMouse lightRadius={lightRadius} hovering={hovering} />
 
           <div className="lg:w-1/3 justify-between align-middle">
             <div className="h-screen justify-center ">
