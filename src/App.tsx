@@ -21,7 +21,7 @@ function App() {
         <>
           <FollowMouse lightRadius={lightRadius} hovering={hovering} />
 
-          <div className="lg:w-1/3 justify-between align-middle">
+          <div className="lg:w-1/3 justify-between align-middle z-10">
             <div className="h-screen justify-center ">
               <h1 className="word text-4xl text-white text-center p-5 align-center font-bold cursor-default">
                 Hi, I'm{" "}
