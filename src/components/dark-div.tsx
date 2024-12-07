@@ -60,7 +60,7 @@ const DarkDiv = ({
           onClick();
         }
       }}
-      style={{ opacity: divOpacity, transition: "opacity 0.3s ease" }}
+      style={{ opacity: divOpacity, transition: "opacity 0.3s" }}
     >
       {children}
     </div>
