@@ -29,9 +29,9 @@ const ParticleContainer = ({}: Props) => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute w-full h-full"
       width={screenWidth}
       height={screenHeight}
+      className="absolute w-full h-full"
     />
   );
 };
