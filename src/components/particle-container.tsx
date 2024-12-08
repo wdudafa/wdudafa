@@ -13,6 +13,11 @@ const ParticleContainer = () => {
       const ctx = canvas.getContext("2d");
 
       if (ctx) {
+        window.addEventListener("resize", () => {
+          ctx.canvas.width = window.innerWidth;
+          ctx.canvas.height = window.innerHeight;
+        });
+
         const box = new Box(ctx);
         for (let i = 0; i < numberOfParticles; i++) {
           const x = Math.random() * screenWidth;

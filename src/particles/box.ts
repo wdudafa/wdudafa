@@ -9,10 +9,6 @@ class Box {
     window.addEventListener("mousemove", (event) => {
       this.checkCollisions(event.clientX, event.clientY);
     });
-    window.addEventListener("resize", () => {
-      this.ctx.canvas.width = window.innerWidth;
-      this.ctx.canvas.height = window.innerHeight;
-    });
   }
 
   addParticle(x: number, y: number) {
