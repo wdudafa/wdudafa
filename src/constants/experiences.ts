@@ -8,7 +8,7 @@ export const experiences: Experience[] = [
   {
     title: "Incoming Software Engineer Intern",
     date: "Jun 2025",
-    description: "",
+    description: "Will be starting soon!",
     technologies: [""],
   },
 ];
