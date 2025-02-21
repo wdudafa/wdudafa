@@ -10,18 +10,11 @@ export const experiences: Experience[] = [
     title: "Incoming Software Engineer Intern",
     date: "Jun 2025",
     description: "Will be starting soon!",
-    technologies: [""],
+    technologies: ["Java"],
   },
 ];
 
 export const projects: Experience[] = [
-  {
-    title: "Unnamed videogame",
-    date: "2025",
-    description:
-      "An environment for me to learn Raylib whilst improving my python skills",
-    technologies: ["Python", "Raylib"],
-  },
   {
     title: "Portfolio",
     date: "2024",
