@@ -10,7 +10,7 @@ export const experiences: Experience[] = [
     title: "Incoming Software Engineer Intern",
     date: "Jun 2025",
     description: "Will be starting soon!",
-    technologies: ["Java"],
+    technologies: ["Java", "SQL", "Spring Boot", "Angular", "JavaScript"],
   },
 ];
 
