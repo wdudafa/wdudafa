@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaEnvelope, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import "./index.css";
 import DarkImage from "./components/dark-image";
 import Card from "./components/card";
