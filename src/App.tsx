@@ -61,13 +61,6 @@ function App() {
                 <FaLinkedin size={40} color={"white"} />
               </a>
               <a
-                href="https://www.youtube.com/@wdudafa"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaYoutube size={40} color={"white"} />
-              </a>
-              <a
                 href="https://github.com/wdudafa"
                 target="_blank"
                 rel="noopener noreferrer"
