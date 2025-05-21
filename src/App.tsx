@@ -80,21 +80,6 @@ function App() {
 
         <div className="mt-14 md:mt-0 lg:w-2/3 h-full lg:overflow-y-scroll pb-24 lg:pr-10">
           <div>
-            <h1 className="text-xl text-white p-5 font-bold cursor-default text-center lg:text-left pt-10">
-              Projects
-            </h1>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {projects.map((project: Experience) => (
-                <Card
-                  lightRadius={lightRadius}
-                  setHovering={setHovering}
-                  experience={project}
-                />
-              ))}
-            </div>
-          </div>
-          <div>
             <h1 className="text-xl text-white p-5 font-bold cursor-default text-center lg:text-left">
               Work Experience
             </h1>
@@ -105,6 +90,21 @@ function App() {
                   lightRadius={lightRadius}
                   setHovering={setHovering}
                   experience={experience}
+                />
+              ))}
+            </div>
+          </div>
+          <div>
+            <h1 className="text-xl text-white p-5 font-bold cursor-default text-center lg:text-left pt-10">
+              Projects
+            </h1>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {projects.map((project: Experience) => (
+                <Card
+                  lightRadius={lightRadius}
+                  setHovering={setHovering}
+                  experience={project}
                 />
               ))}
             </div>
