@@ -7,10 +7,11 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Incoming Placement Software Engineer",
-    date: "Jun 2025",
-    description: "Will be starting soon.",
-    technologies: ["Java"],
+    title: "Software Engineer Placement Intern",
+    date: "Jun 2025 - Present",
+    description:
+      "Working as a software engineer intern at a leading financial company",
+    technologies: ["Java", "SQL"],
   },
 ];
 
