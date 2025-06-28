@@ -17,6 +17,13 @@ export const experiences: Experience[] = [
 
 export const projects: Experience[] = [
   {
+    title: "Spam Email Classifier ",
+    date: "2025",
+    description:
+      "Built a Naive Bayes classifier (95.86% accuracy on unseen data) using frequency distributions and add-one smoothing.",
+    technologies: ["Python", "Pandas", "NumPy"],
+  },
+  {
     title: "Property Tycoon Game (Team Project)",
     date: "2025",
     description:
