@@ -29,15 +29,3 @@
 ![Linux](https://img.shields.io/badge/-Linux-000?&logo=Linux)
 ![MySQL](https://img.shields.io/badge/-MySQL-000?&logo=MySQL)
 
-<!--
-### Projects
-
-![](https://img.shields.io/badge/-000?&logo=Python)[Title](link)<br>
--->
-
-<div style="display: flex; justify-content: center;">
-  <a href="https://wdudafa.github.io/">
-    <img height="137px" src="https://github-readme-stats.vercel.app/api?username=wdudafa&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=ddd&icon_color=bbb&bg_color=2b2d42&theme=dark" />
-    <img height="137px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wdudafa&hide=html&hide_title=true&hide_border=true&layout=compact&langs_count=6&exclude_repo=comp426,Redventures-Movie-Quotes&text_color=ddd&icon_color=bbb&bg_color=2b2d42&theme=dark" />
-  </a>
-</div>
