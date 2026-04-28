@@ -22,10 +22,10 @@ function App() {
         }}
       >
         <div>
-          <h1 style={{ fontSize: 40, fontWeight: "bold", color: "white" }}>
+          <h1 style={{ fontSize: 35, fontWeight: "bold", color: "white" }}>
             wdudafa.
           </h1>
-          <p style={{ fontSize: 30, color: "white" }}>under construction 🚧</p>
+          <p style={{ fontSize: 25, color: "white" }}>under construction 🚧</p>
           <div
             style={{
               display: "flex",
@@ -39,21 +39,21 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin size={40} color={"white"} />
+              <FaLinkedin size={35} color={"white"} />
             </a>
             <a
               href="https://github.com/wdudafa"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub size={40} color={"white"} />
+              <FaGithub size={35} color={"white"} />
             </a>
             <a
               href="mailto:wd@wdudafa.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaEnvelope size={40} color={"white"} />
+              <FaEnvelope size={35} color={"white"} />
             </a>
           </div>
         </div>
