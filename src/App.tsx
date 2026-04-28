@@ -25,7 +25,21 @@ function App() {
           <h1 style={{ fontSize: 35, fontWeight: "bold", color: "white" }}>
             wdudafa.
           </h1>
-          <p style={{ fontSize: 25, color: "white" }}>under construction 🚧</p>
+          <a
+            href="https://old.wdudafa.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p
+              style={{
+                fontSize: 25,
+                color: "white",
+                textDecoration: "underline",
+              }}
+            >
+              under construction 🚧
+            </p>
+          </a>
           <div
             style={{
               display: "flex",
