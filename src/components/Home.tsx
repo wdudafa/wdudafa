@@ -13,7 +13,7 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({
   name = "wdudafa.",
-  bio = "Yada yada",
+  bio = "Hi! I'm a final year CS & AI Student. This website is where I document and showcase all my projects",
   githubUrl = "https://github.com/wdudafa",
   linkedinUrl = "https://linkedin.com/in/wdudafa",
   email = "wd@wdudafa.com",
