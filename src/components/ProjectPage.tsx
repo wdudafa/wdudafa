@@ -21,6 +21,7 @@ const ProjectPage: React.FC = () => {
         <img
           src={`${process.env.PUBLIC_URL}/assets/goofscript.jpeg`}
           className="portfolio-image"
+          alt={project.imageAlt}
           style={{
             maxHeight: 300,
             display: "block",

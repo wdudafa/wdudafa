@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   externalUrl?: string;
   image?: string;
+  imageAlt?: string;
 }
 
 export const projects: Project[] = [
@@ -32,7 +33,9 @@ export const projects: Project[] = [
     description:
       "GoofScript allows developers to write code in a playful, borderline silly syntax; it's all about making coding more goofy. To accompany GoofScript, we've also developed a bespoke Integrated Development Environment (IDE), aptly named MemeIDE. It's designed to run GoofScript code seamlessly and nurture an enjoyable coding experience. Made as part of the Hack Sussex 2024 Hackathon.",
     externalUrl: "https://github.com/wdudafa/goof-script-IDE",
-    image: "goofscript.jpeg"
+    image: "goofscript.jpeg",
+    imageAlt:
+      "Photo of me giving presentation of project to the audience and judges",
   },
   {
     url: "ricksranch",
