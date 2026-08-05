@@ -19,7 +19,7 @@ const ProjectPage: React.FC = () => {
       <p className="portfolio-bio">{project.description}</p>
       {project.image && (
         <img
-          src={`${process.env.PUBLIC_URL}/assets/goofscript.jpeg`}
+          src={`${process.env.PUBLIC_URL}/assets/${project.image}`}
           className="portfolio-image"
           alt={project.imageAlt}
           style={{
