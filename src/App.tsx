@@ -72,7 +72,7 @@ const App: React.FC = () => {
           color: var(--muted);
           font-size: clamp(1rem, 2.2vw, 1.15rem);
           line-height: 1.6;
-          margin: 0 0 44px 0;
+          margin: 0 0 24px 0;
         }
 
         .portfolio-projects {
