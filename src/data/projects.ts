@@ -31,7 +31,7 @@ export const projects: Project[] = [
     url: "goofscript",
     name: "Goof-Script",
     description:
-      "GoofScript allows developers to write code in a playful, borderline silly syntax; it's all about making coding more goofy. To accompany GoofScript, we've also developed a bespoke Integrated Development Environment (IDE), aptly named MemeIDE. It's designed to run GoofScript code seamlessly and nurture an enjoyable coding experience. Made as part of the Hack Sussex 2024 Hackathon.",
+      "GoofScript allows developers to write code in a playful, borderline silly syntax. To accompany GoofScript, we've also developed a bespoke Integrated Development Environment (IDE), aptly named MemeIDE. It's designed to run GoofScript code seamlessly and make an enjoyable coding experience. Made as part of the Hack Sussex 2024 Hackathon.",
     externalUrl: "https://github.com/wdudafa/goof-script-IDE",
     image: "goofscript.jpeg",
     imageAlt:
