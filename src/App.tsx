@@ -7,6 +7,11 @@ const App: React.FC = () => {
   return (
     <>
       <style>{`
+        body {
+          margin: 0
+          padding: 0
+        }
+
         .portfolio-wrapper {
           --bg: darkslategrey;
           --text: #f4f2ee;
