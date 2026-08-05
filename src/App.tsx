@@ -7,11 +7,6 @@ const App: React.FC = () => {
   return (
     <>
       <style>{`
-        body {
-          margin: 0
-          padding: 0
-        }
-
         .portfolio-wrapper {
           --bg: darkslategrey;
           --text: #f4f2ee;
@@ -24,7 +19,6 @@ const App: React.FC = () => {
           align-items: center;
           justify-content: center;
           min-height: 100vh;
-          min-height: 100dvh;
           padding: 24px;
           box-sizing: border-box;
         }
