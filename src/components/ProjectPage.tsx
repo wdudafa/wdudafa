@@ -36,7 +36,7 @@ const ProjectPage: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          view repo
+          repo link
         </a>
       )}
     </div>
