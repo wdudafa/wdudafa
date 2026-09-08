@@ -56,7 +56,7 @@ const App: React.FC = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: opacity 0.2s ease;
+          transition: opacity 0.3s ease;
         }
 
         .portfolio-links-row a:hover {
