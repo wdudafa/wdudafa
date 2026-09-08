@@ -7,12 +7,14 @@ const App: React.FC = () => {
   return (
     <>
       <style>{`
+        body {
+          background: darkslategrey;
+        }
+
         .portfolio-wrapper {
-          --bg: darkslategrey;
           --text: #f4f2ee;
           --muted: #cfd3d0;
           --link: tomato;
-          background: var(--bg);
           color: var(--text);
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
           display: flex;
