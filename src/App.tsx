@@ -91,7 +91,6 @@ const App: React.FC = () => {
         .portfolio-project-item {
           display: flex;
           align-items: center;
-          gap: 10px;
           font-family: "SF Mono", Menlo, Consolas, monospace;
         }
 
@@ -103,11 +102,26 @@ const App: React.FC = () => {
           color: var(--link);
           text-decoration: underline;
           text-underline-offset: 3px;
-          transition: opacity 0.2s ease;
+          transition: all 0.7s ease;
         }
 
         .portfolio-project-item a:hover {
           opacity: 0.75;
+        }
+          
+        .portfolio-project-item p {
+          color: var(--link);
+          transition: all 0.7s ease;
+        }
+
+        .portfolio-project-item p {
+          transform: translate(-30px, 0px);
+          opacity: 0;
+        }
+
+        .portfolio-project-item:hover p {
+          opacity: 0.75;
+          transform: translate(0px, 0px);
         }
 
         .project-page {
