@@ -147,17 +147,37 @@ body {
 
 .portfolio-project-item p {
   color: var(--link);
-  transition: all 0.7s ease;
-}
-
-.portfolio-project-item p {
-  transform: translate(-30px, 0px);
+  transform: translateX(-30px);
   opacity: 0;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
 .portfolio-project-item:hover p {
   opacity: 0.75;
-  transform: translate(0px, 0px);
+  transform: translateX(0);
+}
+
+@media (hover: none) {
+  .portfolio-project-item p {
+    opacity: 0.75;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-project-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    line-height: 1.6;
+  }
+
+  .portfolio-project-item p {
+    width: 100%;
+    margin: 4px 0 0 0;
+    padding-left: 1.5rem;
+  }
 }
 
 .project-page {
