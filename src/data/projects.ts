@@ -10,6 +10,12 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    url: "laser",
+    name: "Laser",
+    shortDesc: "Back-end programming language",
+    description: "🚧 More details shortly... 🚧",
+  },
+  {
     url: "glim",
     name: "Glim",
     shortDesc: "Scavenger Hunt App",
