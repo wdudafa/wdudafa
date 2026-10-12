@@ -12,10 +12,11 @@ const ProjectPage: React.FC = () => {
 
   return (
     <div className="project-page">
-      <Link className="back-link" to="/">
+     
+      <h1 className="portfolio-name">{project.name}</h1>
+       <Link className="back-link" to="/">
         &larr; back
       </Link>
-      <h1 className="portfolio-name">{project.name}</h1>
       <p className="portfolio-bio">{project.description}</p>
       {project.image && (
         <img
