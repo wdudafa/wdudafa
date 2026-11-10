@@ -52,7 +52,7 @@ const Home: React.FC<HomeProps> = ({
         {projects.map((project) => (
           <div className="portfolio-project-item" key={project.url}>
             <span className="branch">&#9492;&#9472;&nbsp;</span>
-            <Link to={`/projects/${project.url}`}>{project.name}</Link>
+            <Link to={`/${project.url}`}>{project.name}</Link>
             <p>&nbsp;&rarr; {project.shortDesc}</p>
           </div>
         ))}
