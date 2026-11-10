@@ -13,7 +13,8 @@ export const projects: Project[] = [
     url: "vaporator",
     name: "Vaporator",
     shortDesc: "Game recommendation visualiser",
-    description: "Vaporator is a Steam game recommendation visualiser that helps users discover new games based on their interests and gaming history. Users can enter their Steam profile to receive personalised recommendations based on the games they play or search for specific games to find similar titles. Recommendations are displayed in an interactive 3D visualisation, allowing users to explore connections between 140k+ Steam games and discover new ones they might enjoy.",
+    description:
+      "Vaporator is a Steam game recommendation visualiser that helps users discover new games based on their interests and gaming history. Users can enter their Steam profile to receive personalised recommendations based on the games they play or search for specific games to find similar titles. Recommendations are displayed in an interactive 3D visualisation, allowing users to explore connections between 140k+ Steam games and discover new ones they might enjoy.",
     externalUrl: "https://github.com/wdudafa/vaporator",
     image: "vaporator.png",
     imageAlt: "Vaporator visualiser screenshot",

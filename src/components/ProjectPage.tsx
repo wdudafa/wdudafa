@@ -12,9 +12,8 @@ const ProjectPage: React.FC = () => {
 
   return (
     <div className="project-page">
-     
       <h1 className="portfolio-name">{project.name}</h1>
-       <Link className="back-link" to="/">
+      <Link className="back-link" to="/">
         &larr; back
       </Link>
       <p className="portfolio-bio">{project.description}</p>
@@ -37,7 +36,7 @@ const ProjectPage: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          repo link
+          View on GitHub &#8599;
         </a>
       )}
     </div>

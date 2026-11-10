@@ -104,6 +104,7 @@ body {
   text-decoration: underline;
   text-underline-offset: 3px;
   display: inline-block;
+  padding-top: 1rem;
 }
 
 .portfolio-bio {
@@ -157,6 +158,10 @@ body {
 .portfolio-project-item:hover p {
   opacity: 0.75;
   transform: translateX(0);
+}
+
+.portfolio-image {
+  border-radius: 1rem;
 }
 
 @media (hover: none) {
