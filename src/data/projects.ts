@@ -10,10 +10,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    url: "laser",
-    name: "Laser",
-    shortDesc: "Back-end programming language",
-    description: "🚧 More details shortly... 🚧",
+    url: "vaporator",
+    name: "Vaporator",
+    shortDesc: "Game recommendation visualiser",
+    description: "Vaporator is a Steam game recommendation visualiser that helps users discover new games based on their interests and gaming history. Users can enter their Steam profile to receive personalised recommendations based on the games they play or search for specific games to find similar titles. Recommendations are displayed in an interactive 3D visualisation, allowing users to explore connections between 140k+ Steam games and discover new ones they might enjoy.",
+    externalUrl: "https://github.com/wdudafa/vaporator",
+    image: "vaporator.png",
+    imageAlt: "Vaporator visualiser screenshot",
   },
   {
     url: "glim",
@@ -24,20 +27,6 @@ export const projects: Project[] = [
     externalUrl: "https://github.com/wdudafa/glim",
     image: "glim.png",
     imageAlt: "Glim logo",
-  },
-  {
-    url: "spamemailclassifier",
-    name: "Spam Email Classifier",
-    shortDesc: "Spam Detection Tool",
-    description:
-      "Built a Naive Bayes classifier (95.86% accuracy on unseen data) using frequency distributions and add-one smoothing. Made as part of univeristy coursework",
-  },
-  {
-    url: "propertytycoon",
-    name: "Property Tycoon",
-    shortDesc: "Monopoly Like Game",
-    description:
-      "Worked in a small dev team to replicate the popular game: Monopoly. Made as part of univeristy coursework",
   },
   {
     url: "goofscript",
