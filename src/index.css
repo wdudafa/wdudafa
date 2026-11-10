@@ -105,6 +105,10 @@ body {
   text-underline-offset: 3px;
   display: inline-block;
   padding-top: 1rem;
+  transition: color 0.3s ease;
+}
+.portfolio-text-link:hover {
+  color: var(--link);
 }
 
 .portfolio-bio {
@@ -196,7 +200,7 @@ body {
   text-underline-offset: 3px;
   margin-bottom: 32px;
   font-size: 0.95rem;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
 }
 
 .back-link:hover {
